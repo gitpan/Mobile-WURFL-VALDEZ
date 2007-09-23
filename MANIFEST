@@ -1,0 +1,15 @@
+Changes
+lib/Mobile/WURFL.pm
+lib/Mobile/WURFL/Base.pm
+lib/Mobile/WURFL/Device.pm
+lib/Mobile/WURFL/Resource.pm
+Makefile.PL
+MANIFEST
+README
+t/Mobile-WURFL-Base.t
+t/Mobile-WURFL-Device.t
+t/Mobile-WURFL-Resource.t
+t/Mobile-WURFL.t
+t/test.xml
+test.xml
+META.yml                                 Module meta-data (added by MakeMaker)

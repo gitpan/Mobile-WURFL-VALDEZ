@@ -1,0 +1,45 @@
+Mobile-WURFL version 0.01
+=========================
+
+Beware: this is ALPHA software, not production ready!!!
+
+The WURFL is an XML configuration file which contains information about
+capabilities and features of several wireless devices. WURFL means Wireless
+Universal Resource File and was created by Luca Passani and others. The
+official project site is:
+
+         http://wurfl.sourceforge.net/
+
+Mobile::WURFL provides a way to extract desired information from a WURFL
+configuration file. Refer to "Mobile::WURFL::Resource" for methods to
+retrieve, parse and store a WURFL file.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  BerkelyDB
+  XML::LibXML
+  File::Copy
+  File::Temp
+  LWP::Simple
+  Storable
+  
+COPYRIGHT AND LICENCE
+
+GPL v2
+
+Copyright (C) 2005 by Valerio VALDEZ Paolini
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.4 or,
+at your option, any later version of Perl 5 you may have available.
