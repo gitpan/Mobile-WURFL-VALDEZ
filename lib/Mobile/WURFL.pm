@@ -1,10 +1,8 @@
 package Mobile::WURFL;
 
-use 5.008004;
 use strict;
 use warnings;
 use Carp;
-use Data::Dumper; #FIXME
 
 use BerkeleyDB ;
 use Storable qw/freeze thaw/;
@@ -13,30 +11,29 @@ use Mobile::WURFL::Device;
 
 use base 'Mobile::WURFL::Base';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 sub init {
-
   my $self = shift;
   
   $self->SUPER::init;
 
-  my $metaname = "dbase/wurfl.db";
+  my $metaname = 'dbase/wurfl.db';
   my $meta_db = BerkeleyDB::Btree->new(
     -Filename => $metaname,
     -Flags => DB_RDONLY
   ) or confess "Cannot open file $metaname: $!: $BerkeleyDB::Error\n";
   $self->meta_db( $meta_db );
   
-  my $mapname = "dbase/wurfl_map.db";
+  my $mapname = 'dbase/wurfl_map.db';
   my $map_db = BerkeleyDB::Btree->new(
     -Filename => $mapname,
     -Flags => DB_RDONLY
   ) or confess "Cannot open file $mapname: $!: $BerkeleyDB::Error\n";
   $self->map_db( $map_db );
   
-  my $dbname = "dbase/wurfl_data.db";
+  my $dbname = 'dbase/wurfl_data.db';
   my $data_db = BerkeleyDB::Btree->new(
     -Filename => $dbname,
     -Flags => DB_RDONLY
@@ -47,24 +44,21 @@ sub init {
 }
 
 sub meta_db {
-
   $_[0]->{'meta_db'} = $_[1] if @_ > 1;
-  $_[0]->{'meta_db'};
+  return $_[0]->{'meta_db'};
 }
 
 sub map_db {
-
   $_[0]->{'map_db'} = $_[1] if @_ > 1;
-  $_[0]->{'map_db'};
+  return $_[0]->{'map_db'};
 }
-sub data_db {
 
+sub data_db {
   $_[0]->{'data_db'} = $_[1] if @_ > 1;
-  $_[0]->{'data_db'};
+  return $_[0]->{'data_db'};
 }
 
 sub search {
-
   my $self = shift;
   my $uas = shift;
   

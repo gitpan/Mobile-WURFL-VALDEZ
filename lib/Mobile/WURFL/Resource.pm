@@ -1,6 +1,5 @@
 package Mobile::WURFL::Resource;
 
-use 5.008004;
 use strict;
 use warnings;
 use Carp;

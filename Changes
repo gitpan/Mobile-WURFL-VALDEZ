@@ -4,3 +4,9 @@ Revision history for Perl extension Mobile::WURFL.
 	- original version; created by h2xs 1.23 with options
 		-AXc --use-new-tests --skip-exporter -v 0.01 Mobile::WURFL
 
+      Sun Sep 23 19:00:00 2007
+	- modules released on CPAN
+
+0.02  Wed Sep 26 23:26:00 2007
+	- fixed dependencies
+	- added Perl::Critic tests

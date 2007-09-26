@@ -4,8 +4,6 @@ use 5.008004;
 use strict;
 use warnings;
 
-our @ISA = qw();
-
 our $VERSION = '0.01';
 
 use Carp;

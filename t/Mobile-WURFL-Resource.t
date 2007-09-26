@@ -28,24 +28,24 @@ is( $resource->wurfl_uri, 'http://wurfl.sourceforge.net/wurfl.xml', 'default URI
 
 $resource = Mobile::WURFL::Resource->new({});
 
-$resource->wurfl_xml( 'sample.xml');
+$resource->wurfl_xml( './t/sample.xml');
 # 6
-is( $resource->wurfl_xml, 'sample.xml', 'assignment test: xml resource file');
+is( $resource->wurfl_xml, './t/sample.xml', 'assignment test: xml resource file');
 
 $resource->wurfl_bdb('./bdb');
 # 7
 is( $resource->wurfl_bdb, './bdb', 'assignment test: bdb directory');
 
-$resource->wurfl_uri('file:./test.xml');
+$resource->wurfl_uri('file:./t/test.xml');
 # 8
-is( $resource->wurfl_uri, 'file:./test.xml', 'assignment test: URI');
+is( $resource->wurfl_uri, 'file:./t/test.xml', 'assignment test: URI');
 
 # 9
 is( $resource->update, 1, 'update');
 # 10
 is( $resource->error, 0, 'error ok');
 
-$resource->wurfl_uri('notfound.xml');
+$resource->wurfl_uri('not_existent.xml');
 # 11
 is( $resource->update, 0, 'update error');
 
